@@ -9,5 +9,5 @@ angular.module('strategyModule',[])
 		})
 })
 .controller('strategycontrol',['$scope',function($scope){
-	$scope.name="第三";
+	console.log("2222222222222");
 }])
