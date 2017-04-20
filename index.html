@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app="wzry">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>王者荣耀-最强之路</title>
+    <link rel="shortcut icon" href="bitbug_favicon (1).ico" /> 
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="stylesheet" href="css/swiper.min.css" />
+    <script src="js/libs/angular.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/libs/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/libs/angular-css.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="components/home/home.js" type="text/javascript" charset="utf-8"></script>
+    <script src="components/video/video.js" type="text/javascript" charset="utf-8"></script>
+    <script src="components/strategy/strategy.js" type="text/javascript" charset="utf-8"></script>
+    <script src="components/match/match.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<div id="wrap">
+		<div id="main" ui-view=""></div>
+		<div id="tab">
+			<ul>
+				<li><a ui-sref="home" href="">首页</a></li>
+				<li><a ui-sref="video" href="">视频</a></li>
+				<li><a ui-sref="strategy" href="">攻略</a></li>
+				<li><a ui-sref="match" href="">赛事</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

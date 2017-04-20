@@ -1,0 +1,13 @@
+angular.module('videoModule',[])
+.config(function($stateProvider,$urlRouterProvider){
+	$stateProvider
+		.state('video',{
+			url:'/video',
+			templateUrl:'components/video/video.html',
+			controller:'videocontrol',
+			css:'components/video/video.css'
+		})
+})
+.controller('videocontrol',['$scope',function($scope){
+	$scope.name="第二";
+}])
