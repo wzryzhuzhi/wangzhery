@@ -11,6 +11,7 @@
     <script src="js/libs/angular.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/libs/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
     <script src="js/libs/angular-css.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/libs/swiper.min.js" type="text/javascript" charset="utf-8"></script>
     <script src="app.js" type="text/javascript" charset="utf-8"></script>
     <script src="components/home/home.js" type="text/javascript" charset="utf-8"></script>
     <script src="components/video/video.js" type="text/javascript" charset="utf-8"></script>
@@ -19,13 +20,23 @@
 </head>
 <body>
 	<div id="wrap">
+		<div id="head">
+			<div class="logo_top">
+				<a href="javascript:void(0)"></a>
+				<div class="logo_title">
+					<p>王者荣耀</p>
+					<p>全世界撸友，一起开团</p>
+				</div>
+			</div>
+			<div class="download"><a href="javascript:void(0)"></a></div>
+		</div>
 		<div id="main" ui-view=""></div>
 		<div id="tab">
 			<ul>
-				<li><a ui-sref="home" href="">首页</a></li>
-				<li><a ui-sref="video" href="">视频</a></li>
-				<li><a ui-sref="strategy" href="">攻略</a></li>
-				<li><a ui-sref="match" href="">赛事</a></li>
+				<li><a ui-sref="home" href=""></a></li>
+				<li><a ui-sref="video" href=""></a></li>
+				<li><a ui-sref="strategy" href=""></a></li>
+				<li><a ui-sref="match" href=""></a></li>
 			</ul>
 		</div>
 	</div>
