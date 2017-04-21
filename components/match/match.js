@@ -1,13 +1,13 @@
-angular.module('videoModule',[])
+angular.module('matchModule',[])
 .config(function($stateProvider,$urlRouterProvider){
 	$stateProvider
-		.state('video',{
-			url:'/video',
-			templateUrl:'components/video/video.html',
-			controller:'videocontrol',
-			css:'components/video/video.css'
+		.state('match',{
+			url:'/match',
+			templateUrl:'components/match/match.html',
+			controller:'matchcontrol',
+			css:'components/match/match.css'
 		})
 })
-.controller('videocontrol',['$scope',function($scope){
+.controller('matchcontrol',['$scope',function($scope){
 	$scope.name="第二";
 }])
