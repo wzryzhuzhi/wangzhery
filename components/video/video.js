@@ -1,13 +1,16 @@
-angular.module('matchModule',[])
+angular.module('videoModule',[])
 .config(function($stateProvider,$urlRouterProvider){
 	$stateProvider
-		.state('match',{
-			url:'/match',
-			templateUrl:'components/match/match.html',
-			controller:'matchcontrol',
-			css:'components/match/match.css'
-		})
+		.state('video',{
+			url:'/video',
+			templateUrl:'components/video/video.html',
+			controller:'videoControl',
+			css:'components/video/video.css'
+		});
 })
-.controller('matchcontrol',['$scope',function($scope){
-	$scope.name="第四";
-}])
+.controller('videoControl',['$scope','$http',function($scope,$http){
+	console.log('ss');
+		$http.get('components/video/json/轮播.json').success(function(res){
+			$scope.arr=res.msg.reclist_236;
+		});
+}]);
