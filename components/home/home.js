@@ -9,6 +9,7 @@ angular.module('homeModule',[])
 		})
 })
 
+/*轮播事件*/
 .service('swiper',['$timeout',function($timeout){
 	$timeout(function(){
 		new Swiper ('.swiper-container', {
@@ -32,6 +33,5 @@ angular.module('homeModule',[])
 	$http.get('components/home/home_json/home.json').success(function(res){
 		$scope.arrHomeVideos=res.msg.reclist_230;
 		$scope.arrHomePlans=res.msg.reclist_412
-		console.log(res.msg.reclist_412)
 	})
 }])
