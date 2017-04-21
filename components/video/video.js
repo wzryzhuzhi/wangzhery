@@ -8,14 +8,7 @@ angular.module('videoModule',[])
 			css:'components/video/video.css'
 		});
 })
-<<<<<<< HEAD
-.controller('videoControl',['$scope','$http',function($scope,$http){
-	console.log('ss');
-		$http.get('components/video/json/轮播.json').success(function(res){
-			$scope.arr=res.msg.reclist_236;
-		});
-}]);
-=======
+
 .service('swiper',['$timeout',function($timeout){
 	$timeout(function(){
 		var mySwiper = new Swiper ('.swiper-container', {
@@ -36,4 +29,4 @@ angular.module('videoModule',[])
 
 }]);
     
->>>>>>> cd2e9e3c458b219ee6b4be8501dc523118c43fc5
+
