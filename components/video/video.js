@@ -11,6 +11,6 @@ angular.module('videoModule',[])
 .controller('videoControl',['$scope','$http',function($scope,$http){
 	console.log('ss');
 		$http.get('components/video/json/轮播.json').success(function(res){
-			$scope.arr=res;
+			$scope.arr=res.msg.reclist_236;
 		});
 }]);
