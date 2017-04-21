@@ -8,6 +8,30 @@ angular.module('homeModule',[])
 			css:'components/home/home.css'
 		})
 })
-.controller('homecontrol',['$scope',function($scope){
-	$scope.name="三大12312";
+
+.service('swiper',['$timeout',function($timeout){
+	$timeout(function(){
+		new Swiper ('.swiper-container', {
+		    loop: true,
+		    autoplay:2600,
+		    autoplayDisableOnInteraction : false,
+		    // 如果需要分页器
+//		    pagination: '.swiper-pagination',
+		    observer:true,
+			observeParents:true
+		  }) 
+	},10);
+}])
+.controller('homecontrol',['$scope','$http','swiper',function($scope,$http){
+	/*轮播部分*/
+	$http.get('components/home/home_json/homeban.json').success(function(res){
+		$scope.homeSwiper=res.banner
+		$scope.arrSmall=res.small
+	})
+	/*视频部分*/
+	$http.get('components/home/home_json/home.json').success(function(res){
+		$scope.arrHomeVideos=res.msg.reclist_230;
+		$scope.arrHomePlans=res.msg.reclist_412
+		console.log(res.msg.reclist_412)
+	})
 }])
